@@ -1,8 +1,16 @@
 package Item;
 
-public class VHS {
-	
+public class VHS extends Midia {
+
 	private String titulo;
+	
+	public VHS() {
+		
+	}
+	
+	public VHS(String titulo) {
+		setTitulo(titulo);
+	}
 
 	public String getTitulo() {
 		return titulo;
@@ -15,12 +23,15 @@ public class VHS {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("VHS [titulo= ");
+		builder.append("VHS [titulo=");
 		builder.append(titulo);
+		builder.append(", toString()=");
+		builder.append(super.toString());
 		builder.append("]");
 		return builder.toString();
 	}
 	
 	
-
+	
+	
 }

@@ -1,53 +1,56 @@
 package Item;
 
-public class CD {
+public class CD extends Midia {
+
+	private int faixas;
+	private String artista;
+	private String album;
 	
-	public String faixas;
-	public String artista;
-	public String album;
-	
-	public CD(String faixas) {
+	public CD() {
 		
 	}
-
-	public String getFaixas() {
+	
+	public CD(int faixas, String artista, String album) {
+		setFaixas(faixas);
+		setArtista(artista);
+		setAlbum(album);
+	}
+	
+	public int getFaixas() {
 		return faixas;
 	}
-
-	public void setFaixas(String faixas) {
+	public void setFaixas(int faixas) {
 		this.faixas = faixas;
 	}
-
 	public String getArtista() {
 		return artista;
 	}
-
 	public void setArtista(String artista) {
 		this.artista = artista;
 	}
-
 	public String getAlbum() {
 		return album;
 	}
-
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("CD [faixas= ");
+		builder.append("CD [faixas=");
 		builder.append(faixas);
-		builder.append(", artista= ");
+		builder.append(", artista=");
 		builder.append(artista);
-		builder.append(", album= ");
+		builder.append(", album=");
 		builder.append(album);
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
 		return builder.toString();
 	}
 	
 	
 	
 	
-
 }
